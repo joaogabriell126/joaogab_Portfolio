@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*Váriaveis das principais cores da página*/
+:root {
+    --background_color: #0F1624;
+    --text_color: #929EB0;
+    --title_color: #ffffff;
+    --custom_color: #22A4C9;
+}
+
+body {
+    background-color: var(--background_color);
+    color: var(--title_color);
+}
+
+/*Criação do header da página*/
+#header_main {
+    height: 15vh;
+    display: flex;
+    padding: 0rem 2rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegation {
+    width: 40vw;
+}
+
+.navegate_box {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Animação de sublinhado nos elementos da navegate_box e na footer_links*/
+.navegate_box li, .footer_links ul li{
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navegate_box li:before, .footer_links ul li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--custom_color);
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navegate_box li:hover:before, .footer_links ul li:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+/*Termino da customização das li*/
+
+/*Criação do Main, conteúdo principal da página*/
+/*Crianção da página de apresentação - About Me*/
+#about_me {
+    height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_me_div {
+    height: 70vh;
+    width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about_me_div img {
+    width: 37%;
+}
+
+.about_me_apresentation {
+    align-content: center;
+    height: 70vh;
+    width: 45vw;
+}
+
+.apresentation_title{
+    margin-bottom: 2rem;
+}
+
+.apresentation_title h1, .apresentation_title h2{
+    font-size: 3rem;
+}
+
+.apresentation_paragraph{
+    font-size: 1.125rem;
+    line-height: 1.5;
+}
+
+span, strong{
+    color: var(--custom_color);
+}
+
+/*Criação da página de habilidades e Ferramentas*/
+#skills_and_tools{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills_and_tools_title{
+    font-size: 1.9rem;
+}
+
+.skills_and_tools_div{
+    height: 60vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+}
+/*Card Box "programming languanges"*/
+.card_box{
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.programming_laguanges, .tools_and_technologies{
+    height: 50vh;
+    width: 30vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid var(--custom_color);
+    border-radius: 8px;
+    font-size: 1.3rem;
+}
+
+.programming_box_content{
+    height: 40vh;
+    width: 25vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/*Bloco de icones + legenda*/
+.progamming_box, .tools_box{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.fa-brands{
+    font-size: 2.5rem;
+}
+
+/*Página de Soft Skills*/
+#soft_skills{
+    
+}
+
+
+
+
+/*Rodapé da página - Footer*/
+#footer_main{
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact_me{
+    text-align: center;
+    height: 50vh;
+    width: 60vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 1.125rem;
+}
+
+.contact_me_title{
+    font-size: 1.9rem;
+}
+
+.contact_me_text{
+    font-size: 1.3rem;
+    color: var(--custom_color);
+}
+
+.footer_links ul{
+    width: 40vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_links ul li{
+    cursor: pointer;
+    list-style: none;
+}
+
+.contact_me_icons{
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact_me_icons i{
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+.contact_me_icons i:hover{
+     transform: scale(1.1);
+     color: #929EB0;
+}
+
+
+
+
