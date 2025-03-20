@@ -83,8 +83,26 @@ body {
     justify-content: space-between;
 }
 
+.imagem_outside_border{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--custom_color);
+    border-radius: 100%;
+    height: 60vh;
+    width: 30vw;
+    transition: 0.5s;
+}
+
+.imagem_outside_border:hover{
+    transform: scale(1.01);
+
+}
+
 .about_me_div img {
-    width: 37%;
+    border: 0.5rem solid var(--custom_color,);
+    border-radius: 100%;
+    width: 90%;
 }
 
 .about_me_apresentation {
@@ -118,7 +136,8 @@ span, strong{
     align-items: center;
 }
 
-.skills_and_tools_title{
+/*Componente de Título*/
+.skills_and_tools_title, .soft_skills_title, .contact_me_title{
     font-size: 1.9rem;
 }
 
@@ -169,9 +188,71 @@ span, strong{
 
 /*Página de Soft Skills*/
 #soft_skills{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.soft_skills_div{
+    height: 60vh;
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   /* border: 1px solid red;*/
+    justify-content: space-between;
+}
+
+.soft_skills_box{
+    /*border: 1px solid yellow;*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    text-align: left;
+}
+.ordered_list{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.3rem;
+}
+
+/*
+Customização da lista
+Padroniza e mantem a hierarquia de entre os tópicos e seus subtoópicos
+*/
+
+ol {
+    list-style: none;
+    counter-reset: list-counter;
+    padding-left: 0;
+}
+
+ol > li {
+    counter-increment: list-counter;
+    position: relative;
+    padding-left: 25px; /* Espaço para o número */
     
 }
 
+ol > li::before {
+    content: counter(list-counter) ".";
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+ul {
+    margin: 5px 0 10px 20px; /* Ajusta espaçamento */
+    padding-left: 0;
+}
+
+ul li {
+    list-style-type: disc;
+    margin-left: 15px;
+}
 
 
 
@@ -192,10 +273,6 @@ span, strong{
     justify-content: space-between;
     flex-direction: column;
     font-size: 1.125rem;
-}
-
-.contact_me_title{
-    font-size: 1.9rem;
 }
 
 .contact_me_text{
